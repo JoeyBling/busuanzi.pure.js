@@ -55,7 +55,9 @@ export default {
   // 监听,当路由发生变化的时候执行
   watch: {
     $route(to, from) {
-      busuanzi.fetch();
+      if (to.path != from.path) {
+        script.fetch();
+      }
       // console.log(to.path);
     }
   }
