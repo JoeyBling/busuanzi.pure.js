@@ -42,14 +42,12 @@ bszCaller = {
   }
 }
 
-export function fetch() {
+const fetch = () => {
   bszTag && bszTag.hides();
   bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback", function (t) {
     bszTag.texts(t), bszTag.shows()
   })
 }
-
-fetch();
 
 bszTag = {
   bszs: ["site_pv", "page_pv", "site_uv"],
@@ -71,4 +69,10 @@ bszTag = {
       e && (e.style.display = "inline")
     })
   }
+};
+
+fetch();
+
+module.exports = {
+  fetch
 };

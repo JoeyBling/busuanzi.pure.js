@@ -1,6 +1,6 @@
 {
   "name": "busuanzi.pure.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "不蒜子访问量统计功能",
   "main": "index.js",
   "repository": {
