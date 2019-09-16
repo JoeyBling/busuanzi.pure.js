@@ -2,25 +2,30 @@ var bszCaller, bszTag, scriptTag, ready;
 
 var t, e, n, a = !1,
   c = [];
-ready = function (t) {
-  return a || "interactive" === document.readyState || "complete" === document.readyState ? t.call(document) : c.push(function () {
-    return t.call(this)
-  }), this
-}, e = function () {
-  for (var t = 0, e = c.length; t < e; t++) c[t].apply(document);
-  c = []
-}, n = function () {
-  a || (a = !0, e.call(window), document.removeEventListener ? document.removeEventListener("DOMContentLoaded", n, !1) : document.attachEvent && (document.detachEvent("onreadystatechange", n), window == window.top && (clearInterval(t), t = null)))
-}, document.addEventListener ? document.addEventListener("DOMContentLoaded", n, !1) : document.attachEvent && (document.attachEvent("onreadystatechange", function () {
-  /loaded|complete/.test(document.readyState) && n()
-}), window == window.top && (t = setInterval(function () {
-  try {
-    a || document.documentElement.doScroll("left")
-  } catch (t) {
-    return
-  }
-  n()
-}, 5)));
+
+// 修复Node同构代码的问题
+if (typeof document !== "undefined") {
+  ready = function (t) {
+    return a || "interactive" === document.readyState || "complete" === document.readyState ? t.call(document) : c.push(function () {
+      return t.call(this)
+    }), this
+  }, e = function () {
+    for (var t = 0, e = c.length; t < e; t++) c[t].apply(document);
+    c = []
+  }, n = function () {
+    a || (a = !0, e.call(window),
+      document.removeEventListener ? document.removeEventListener("DOMContentLoaded", n, !1) : document.attachEvent && (document.detachEvent("onreadystatechange", n), window == window.top && (clearInterval(t), t = null)))
+  }, document.addEventListener ? document.addEventListener("DOMContentLoaded", n, !1) : document.attachEvent && (document.attachEvent("onreadystatechange", function () {
+    /loaded|complete/.test(document.readyState) && n()
+  }), window == window.top && (t = setInterval(function () {
+    try {
+      a || document.documentElement.doScroll("left")
+    } catch (t) {
+      return
+    }
+    n()
+  }, 5)));
+}
 
 bszCaller = {
   fetch: function (t, e) {
@@ -71,7 +76,10 @@ bszTag = {
   }
 };
 
-fetch();
+// 修复Node同构代码的问题
+if (typeof document !== "undefined") {
+  fetch();
+}
 
 module.exports = {
   fetch

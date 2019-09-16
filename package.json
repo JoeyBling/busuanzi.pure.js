@@ -1,8 +1,11 @@
 {
   "name": "busuanzi.pure.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "不蒜子访问量统计功能",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoeyBling/busuanzi.pure.js.git"

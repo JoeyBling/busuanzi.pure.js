@@ -1,8 +1,17 @@
 # busuanzi.pure.js
 
+```
+ _                                     _                           _
+| |__  _   _ ___ _   _  __ _ _ __  ___(_)  _ __  _   _ _ __ ___   (_)___
+| '_ \| | | / __| | | |/ _` | '_ \|_  / | | '_ \| | | | '__/ _ \  | / __|
+| |_) | |_| \__ \ |_| | (_| | | | |/ /| |_| |_) | |_| | | |  __/_ | \__ \
+|_.__/ \__,_|___/\__,_|\__,_|_| |_/___|_(_) .__/ \__,_|_|  \___(_)/ |___/
+                                          |_|                   |__/
+```
+
 ![](https://nodei.co/npm/busuanzi.pure.js.png?downloads=true&downloadRank=true&stars=true)
 
-[![npm package](https://badge.fury.io/js/busuanzi.pure.js.svg?label=busuanzi.pure.js)](https://www.npmjs.com/package/busuanzi.pure.js)
+[![npm package](https://img.shields.io/npm/v/busuanzi.pure.js.svg?label=busuanzi.pure.js)](https://www.npmjs.com/package/busuanzi.pure.js)
 [![downloads-total](https://img.shields.io/npm/dt/busuanzi.pure.js.svg)](https://www.npmjs.com/package/busuanzi.pure.js)
 [![downloads-month](https://img.shields.io/npm/dm/busuanzi.pure.js.svg)](https://www.npmjs.com/package/busuanzi.pure.js)
 ![star](https://img.shields.io/github/stars/JoeyBling/busuanzi.pure.js "star")
@@ -16,7 +25,7 @@
 &#160;&#160;&#160;&#160;**不蒜子访问量统计功能**
 
 ## 推荐一款Hexo主题
-> 一个简洁优雅的hexo主题：[https://github.com/JoeyBling/hexo-theme-yilia-plus](https://github.com/JoeyBling/hexo-theme-yilia-plus)
+> **一个简洁优雅的hexo主题 ➡️ [https://github.com/JoeyBling/hexo-theme-yilia-plus](https://github.com/JoeyBling/hexo-theme-yilia-plus)**
 
 ## 开始使用
 

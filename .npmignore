@@ -5,6 +5,8 @@ ts*.json
 .eslint*
 rollup.config.js
 .github
+.editorconfig
+yarn.lock
 
 # Logs
 logs
