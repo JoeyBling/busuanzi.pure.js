@@ -57,10 +57,13 @@ npm install busuanzi.pure.js --save
 </template>
 
 <script>
-
-const busuanzi = require("busuanzi.pure.js");
+/* 不蒜子访问量统计 */
+let script;
 
 export default {
+  mounted() {
+    script = require("busuanzi.pure.js");
+  },
   // 监听,当路由发生变化的时候执行
   watch: {
     $route(to, from) {
@@ -73,6 +76,13 @@ export default {
 };
 </script>
 ```
+
+## 其它项目支持
+
+- ### 一款简洁优雅的hexo主题：[hexo-theme-yilia-plus](https://github.com/JoeyBling/hexo-theme-yilia-plus)
+- ### 一款简洁优雅的VuePress主题：[vuepress-theme-yilia-plus](https://github.com/JoeyBling/vuepress-theme-yilia-plus)
+- ### VuePress集成Live2D看板娘：[vuepress-plugin-helper-live2d](https://github.com/JoeyBling/vuepress-plugin-helper-live2d)
+
 
 ## 关于我
 - [个人博客](https://zhousiwei.gitee.io/)
