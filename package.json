@@ -1,6 +1,6 @@
 {
   "name": "busuanzi.pure.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "不蒜子访问量统计功能",
   "main": "index.js",
   "publishConfig": {
@@ -13,7 +13,8 @@
   "bugs": "https://github.com/JoeyBling/busuanzi.pure.js/issues",
   "homepage": "https://github.com/JoeyBling/busuanzi.pure.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "openteam-postinstall || exit 0"
   },
   "keywords": [
     "busuanzi",
@@ -27,5 +28,8 @@
     "email": "2434387555@qq.com",
     "url": "https://zhousiwei.gitee.io"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "openteam-postinstall": "^1.0.2"
+  }
 }
